@@ -1,22 +1,15 @@
 #include <iostream>
+#include <string>
 #include <vector>
-#include <algorithm>
+
 using namespace std;
 
-void PrintWorryCount(const vector<bool>& is_nervous) {
-    // подсчитываем количество элементов в векторе is_nervous, равных true
-    count(is_nervous.begin(), is_nervous.end(), true);
-    int worry_count = 0;
-    for (bool status : is_nervous) {
-        if (status) {
-            ++worry_count;
-        }
-    }
-    cout << worry_count << endl;
+int CountStartsWithA(const vector<string>& xs) {
+    // посчитайте число строк, начинающихс€ на букву A
 }
 
 int main() {
-    // не мен€йте содержимое функции main
-    PrintWorryCount({ true, true, false, true });
+    // не мен€йте тело main
+    cout << CountStartsWithA({ "And"s, "another"s, "one"s, "gone"s, "another"s, "one"s "bites"s, "the"s, "dust"s });
     return 0;
 }
