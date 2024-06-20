@@ -1,30 +1,20 @@
 #include <iostream>
 #include <string>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
-bool is_a(string str) {
-    if (!str.empty() && (str[0] == 'a' || str[0] == 'A')) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
-int CountStartsWithA(const vector<string>& xs) {
-    // посчитайте число строк, начинающихся на букву A
-    int a{};
-    a = count_if(xs.begin(), xs.end(), is_a);
-    return a;
-}
-
-
 int main() {
-    // не меняйте тело main
-         cout << CountStartsWithA({ "And"s, "another"s, "one"s, "gone"s, "another"s, "one"s "bites"s, "the"s, "dust"s });
-    return 0;
-}
+    int count;
+    cin >> count;
+    for (int i = 0; i < count; ++i) {
+        string name;
+        int age;
+        cin >> name >> age;
+        // сохраните в вектор пар
+    }
 
+    // выведите только имена в порядке убывания возраста
+    // Jack
+    // John
+    // ...
+}
