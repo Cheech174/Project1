@@ -1,27 +1,33 @@
-#include <iostream>
-#include <string>
-#include <vector>
 #include <algorithm>
+#include <iostream>
+#include <vector>
 
-using namespace std; 
+using namespace std;
+
+pair<bool, double> CalcMedian(vector<double> samples) {
+    // верните {true, медиана}, если она существует,
+    // то есть вектор непустой,
+    // иначе - {false, 0}
+    // обратите внимание - вектор принимаем по значению,
+    // так как его придётся немного подпортить, чтобы вернуть ответ
+}
 
 int main() {
-    int count;
-    vector <pair<string, int>> name_age;
-    cin >> count;
-    for (int i = 0; i < count; ++i) {
-        string name;
-        int age;
-        cin >> name >> age;
-        name_age.push_back(make_pair(name, age));
+    int size;
+    cin >> size;
+
+    vector<double> samples;
+    for (int i = 0; i < size; ++i) {
+        double sample;
+        cin >> sample;
+        samples.push_back(sample);
     }
-    sort(name_age.begin(), name_age.end());
-    reverse(name_age.begin(), name_age.end());
-    for (const auto& element : name_age) {
-        cout << element.first << " " << "\n";
+
+    pair<bool, double> result = CalcMedian(samples);
+    if (result.first) {
+        cout << result.second << endl;
+    }
+    else {
+        cout << "Empty vector"s << endl;
     }
 }
-    // выведите только имена в порядке убывания возраста
-    // Jack
-    // John
-    // ...
